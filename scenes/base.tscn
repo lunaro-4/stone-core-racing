@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dgcsumthadl7i"]
+
+[ext_resource type="PackedScene" uid="uid://d0nfqytaxskcc" path="res://scenes/flat_box.tscn" id="1_pvqg0"]
+
+[node name="base" type="Node3D" unique_id=1164833910]
+
+[node name="FlatBox" parent="." unique_id=440425636 instance=ExtResource("1_pvqg0")]
