@@ -26,6 +26,7 @@ namespace StoneCoreRacing
 			_collisionShape = FindChild("CollisionShape3D") as CollisionShape3D;
 			_csgSphere = FindChild("CSGSphere3D") as CsgSphere3D;
 			_csgMesh = FindChild("MeshInstance3D") as MeshInstance3D;
+			updateSize();
 		}
 
 
