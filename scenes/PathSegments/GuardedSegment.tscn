@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://chf1j3h43i3vn"]
+
+[ext_resource type="Script" uid="uid://bnsqwbtj5pcag" path="res://scenes/PathSegments/GuardedSegment.cs" id="1_v02ps"]
+[ext_resource type="PackedScene" uid="uid://d0nfqytaxskcc" path="res://scenes/PathSegments/flat_box.tscn" id="2_xk2fd"]
+
+[node name="GuardedSegment" type="Node3D" unique_id=1406812771]
+script = ExtResource("1_v02ps")
+XSize = 3.0
+
+[node name="Bottom" parent="." unique_id=440425636 instance=ExtResource("2_xk2fd")]
+XSize = 3.0
+YSize = 0.5
+
+[node name="Left" parent="." unique_id=429079332 instance=ExtResource("2_xk2fd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 0.5, 0)
+XSize = 0.5
+
+[node name="Right" parent="." unique_id=688269271 instance=ExtResource("2_xk2fd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0.5, 0)
+XSize = 0.5

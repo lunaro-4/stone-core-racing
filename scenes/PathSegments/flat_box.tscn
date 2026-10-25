@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://d0nfqytaxskcc"]
 
-[ext_resource type="Script" uid="uid://dho231u4qaf3q" path="res://scenes/FlatBox.cs" id="1_r6brb"]
+[ext_resource type="Script" uid="uid://dho231u4qaf3q" path="res://scenes/PathSegments/FlatBox.cs" id="1_r6brb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p1x7y"]
 resource_local_to_scene = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_i5xul"]
 
 [node name="FlatBox" type="StaticBody3D" unique_id=440425636]
 script = ExtResource("1_r6brb")
@@ -11,4 +13,5 @@ script = ExtResource("1_r6brb")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1380555078]
 shape = SubResource("BoxShape3D_p1x7y")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=499673282]
+[node name="BoxMesh" type="MeshInstance3D" parent="." unique_id=1315201202]
+mesh = SubResource("BoxMesh_i5xul")

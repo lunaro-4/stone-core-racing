@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://dgcsumthadl7i"]
 
-[ext_resource type="PackedScene" uid="uid://d0nfqytaxskcc" path="res://scenes/flat_box.tscn" id="1_pvqg0"]
+[ext_resource type="PackedScene" uid="uid://d0nfqytaxskcc" path="res://scenes/PathSegments/flat_box.tscn" id="1_pvqg0"]
 [ext_resource type="PackedScene" uid="uid://b3dpdrlt1658t" path="res://scenes/BallBase1.tscn" id="2_baglu"]
 
 [node name="base" type="Node3D" unique_id=1164833910]
 
 [node name="FlatBox" parent="." unique_id=440425636 instance=ExtResource("1_pvqg0")]
 transform = Transform3D(0.9609049, 0.27687863, 0, -0.27687863, 0.9609049, 0, 0, 0, 1, 0, 1.4535203, 0)
-XSize = 7.105
+XSize = 8.914
 ZSize = 7.94
 
 [node name="BallBase1" parent="." unique_id=821876051 instance=ExtResource("2_baglu")]

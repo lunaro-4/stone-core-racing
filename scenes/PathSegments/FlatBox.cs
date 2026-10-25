@@ -23,6 +23,7 @@ namespace StoneCoreRacing
 			get { return _y; }
 			set { setY(value); }
 		}
+
 		private float _z = 1f;
 		[Export(PropertyHint.Range, "0.01,30,or_greater")]
 		public float ZSize
@@ -32,31 +33,35 @@ namespace StoneCoreRacing
 		}
 
 		private CollisionShape3D _collisionShape;
-		private CsgBox3D _csgBox;
+		private MeshInstance3D _csgMesh;
 
 		public override void _Ready()
 		{
 			_collisionShape = FindChild("CollisionShape3D") as CollisionShape3D;
-			_csgBox = FindChild("CSGBox3D") as CsgBox3D;
+			_csgMesh = FindChild("BoxMesh") as MeshInstance3D;
+			_csgMesh.Mesh = new BoxMesh();
+
 			updateSize();
 		}
 
 
 		private void updateSize()
 		{
-			if (_collisionShape == null) return;
-			BoxShape3D boxShape = _collisionShape.Shape as BoxShape3D;
-			Vector3 shapeSize = boxShape.Size;
-			if (_csgBox == null) return;
-			Vector3 size = _csgBox.Size;
+			if (_collisionShape == null) {
+				GD.Print("CollisionShape not found");
+				return;
+			};
+			if (_csgMesh == null) {
+				GD.Print("MeshInstance3D not found");
+				return;
+			};
 
-			if (shapeSize != null)
-				shapeSize = new Vector3 (_x, _y, _z);
-			if (_csgBox != null)
-				size = new Vector3 (_x, _y, _z);
-			boxShape.Size = shapeSize;
-			// _collisionShape.Shape = boxShape;
-			_csgBox.Size = size;
+			BoxShape3D boxShape = _collisionShape.Shape as BoxShape3D;
+			BoxMesh boxMesh =  _csgMesh.Mesh as BoxMesh;
+			Vector3 shapeSize = boxShape.Size;
+			Vector3 size = new Vector3 (_x, _y, _z);
+			boxShape.Size = size;
+            boxMesh.Size = size;
 
 		}
 
