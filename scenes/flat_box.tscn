@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dho231u4qaf3q" path="res://scenes/FlatBox.cs" id="1_r6brb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p1x7y"]
-size = Vector3(10, 1, 10)
+resource_local_to_scene = true
 
 [node name="FlatBox" type="StaticBody3D" unique_id=440425636]
 script = ExtResource("1_r6brb")

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b3dpdrlt1658t"]
+
+[ext_resource type="Script" uid="uid://bo5se15heowlj" path="res://scenes/BallBase1.cs" id="1_6yl4c"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_78s75"]
+radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yl4c"]
+albedo_color = Color(1, 0.3254902, 0.24313726, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_6yl4c"]
+material = SubResource("StandardMaterial3D_6yl4c")
+radius = 1.0
+height = 2.0
+
+[node name="BallBase1" type="RigidBody3D" unique_id=821876051]
+script = ExtResource("1_6yl4c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1768668349]
+shape = SubResource("SphereShape3D_78s75")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=656436013]
+visible = false
+radius = 7.581
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=468273388]
+mesh = SubResource("SphereMesh_6yl4c")
