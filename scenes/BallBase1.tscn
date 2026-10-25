@@ -20,9 +20,5 @@ script = ExtResource("1_6yl4c")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1768668349]
 shape = SubResource("SphereShape3D_78s75")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=656436013]
-visible = false
-radius = 7.581
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=468273388]
 mesh = SubResource("SphereMesh_6yl4c")
